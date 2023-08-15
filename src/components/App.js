@@ -12,8 +12,8 @@ function App() {
   const [userName, setUserName] = React.useState('');
   const [userDescription, setUserDescription] = React.useState('');
   const [userAvatar, setUserAvatar] = React.useState('');
-  const [cards, setCards] = React.useState('');
-  const [selectedCard, setSelectedCard] = React.useState(0);
+  const [cards, setCards] = React.useState([]);
+  const [selectedCard, setSelectedCard] = React.useState({});
 
   React.useEffect(() => {
     api.getProfileInfo()
