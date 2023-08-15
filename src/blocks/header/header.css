@@ -1,0 +1,11 @@
+.header {
+  width: 880px;
+  overflow: hidden;
+  border-bottom: solid 1px rgba(84, 84, 84, 0.7);
+}
+
+@media screen and (max-width: 880px) {
+  .header {
+    max-width: 100%;
+  }
+}
