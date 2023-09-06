@@ -19,17 +19,16 @@ class Api {
       .then(this._getResponseData)
   }
 
-  toggleLike(card) {
-    card.isLiked = !card.isLiked;
-    if (card.isLiked) {
+  toggleLike(card, isLiked) {
+    if (!isLiked) {
       return this._putLike(card)
-    } if (!card.isLiked) {
+    } if (isLiked) {
       return this._deleteLike(card)
     }
   }
 
   _putLike(card) {
-    return fetch(`${this._baseUrl}/cards/${card.id}/likes`, {
+    return fetch(`${this._baseUrl}/cards/${card._id}/likes`, {
       method: 'PUT',
       headers: this._headers
     }).then(this._getResponseData)
@@ -40,7 +39,7 @@ class Api {
   }
 
   _deleteLike(card) {
-    return fetch(`${this._baseUrl}/cards/${card.id}/likes`, {
+    return fetch(`${this._baseUrl}/cards/${card._id}/likes`, {
       method: 'DELETE',
       headers: this._headers
     }).then(this._getResponseData)
