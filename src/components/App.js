@@ -97,6 +97,7 @@ function App() {
       .then((res) => {
         setCurrentUser(res);
       })
+      .then(closeAllPopups)
       .catch(console.log);
   }
 
@@ -106,6 +107,7 @@ function App() {
       .then((res) => {
         setCurrentUser(res);
       })
+      .then(closeAllPopups)
       .catch(console.log);
   }
 

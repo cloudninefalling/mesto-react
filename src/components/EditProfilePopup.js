@@ -29,8 +29,6 @@ export default function EditProfilePopup(props) {
       name,
       about: description,
     });
-
-    props.onClose();
   }
 
   return (
